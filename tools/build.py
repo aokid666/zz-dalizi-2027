@@ -44,7 +44,7 @@ def parse(doc):
    t=l['t'];m=re.fullmatch(r'(20\d{2})\s*年考研政治真题(答案)?',t)
    if m and pn>=45:
     year=int(m[1]);mode='a' if m[2] else 'q';groups.setdefault(year,{'q':[],'a':[]});continue
-   if pn<45 and re.match(r'^(特征[一二三四五六七]|经典题型[一二三]|专题[一二三四五])[：:]',t):
+   if 5<=pn<45 and re.match(r'^(特征[一二三四五六七]|经典题型[一二三]|专题[一二三四五])[：:]',t):
     read_sections.append({'title':t,'firstPage':pn})
    if year is not None:groups[year][mode].append(l)
  assert sorted(groups)==list(range(2015,2026)),list(groups)
