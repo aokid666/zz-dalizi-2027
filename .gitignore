@@ -1,3 +1,4 @@
 .site-source/
 _site/
 __pycache__/
+pdf/.*
