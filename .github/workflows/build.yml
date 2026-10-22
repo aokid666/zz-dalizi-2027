@@ -9,7 +9,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: dalizi-publish
+  group: dalizi-publish-v2
   cancel-in-progress: true
 jobs:
   build:
