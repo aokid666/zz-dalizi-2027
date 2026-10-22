@@ -54,7 +54,7 @@ def parse(doc):
   for mode in ['q','a']:
    rows=cleanrows(group[mode]);heads=[]
    for i,l in enumerate(rows):
-    if l['b'][0]>110:continue
+    if l['b'][0]>100:continue
     m=re.match(r'^(\d{1,2})[、.．]\s*(.*)',l['t'])
     if m and (mode=='q' or re.match(r'【答案】',m[2])):heads.append((i,int(m[1]),m[2]))
    nums=[num for _,num,_ in heads]
